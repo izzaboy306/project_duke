@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: 'pages#home'
+  devise_scope :user do
+  	root to: "devise/sessions#new"
+	end
+
+  if Rails.env.production? || Rails.env.development?
+    devise_for :users, :controllers => { :registrations => "users/registrations" } 
+  else
+    devise_for :users
+  end
+
+  get 'home', to: 'pages#home'
 end
