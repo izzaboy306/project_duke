@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   	root to: "devise/sessions#new"
 	end
 
-  if Rails.env.production? || Rails.env.development?
+  if Rails.env.production?
     devise_for :users, :controllers => { :registrations => "users/registrations" } 
   else
     devise_for :users
