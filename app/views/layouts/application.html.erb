@@ -33,8 +33,12 @@
 						  <%= link_to "Log In", new_user_session_path, class: "btn btn-default navbar-btn" %>
 						<% end %>
 					</div>
-		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="/about">About</a></li>
+					<ul class="nav navbar-nav navbar-right">
+		      	<% if user_signed_in? %>
+							<li><%= link_to "Customers", '#' %></li>
+							<li><%= link_to "Vendors", '#' %></li>
+							<li><%= link_to "Reports", '#' %></li>
+		      	<% end %>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div>
