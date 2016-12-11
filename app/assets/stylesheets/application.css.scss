@@ -23,6 +23,8 @@ h1, h2, h3 {
   font-family: 'Open Sans', sans-serif;
 }
 
+body { padding-top: 70px; }
+
 // Background Gradient
 .home-callout {
   /* Gradient provided by @_ighosh at uiGradients.com */
@@ -43,8 +45,18 @@ h1, h2, h3 {
   position: fluid;
   width: 100%;
 }
-.alert-notice, .alert-alert {
-  text-align: center;
-  background: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.5);
-}
+
+// Flash Message Styles
+.alert-error, .alert-alert {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-success, .alert-notice {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
