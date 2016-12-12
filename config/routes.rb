@@ -9,9 +9,13 @@ Rails.application.routes.draw do
     devise_for :users
   end
 
-  get 'home', to: 'pages#home'
-
   resources :users do
   	resource :profile
 	end
+
+  get 'home', to: 'pages#home'
+  get 'customers', to: 'pages#customers'
+  get 'vendors', to: 'pages#vendors'
+  get 'reports', to: 'pages#reports'
+  get 'admin', to: 'admin#home'
 end

@@ -31,7 +31,7 @@
   					<!-- Single button -->
 						<div class="btn-group">
 						  <button type="button" class="btn btn-default navbar-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						    <% if current_user.profile.first_name? %>
+						    <% if current_user.profile %>
 									<%= current_user.profile.first_name %>
 								<% else %>
 									Account
@@ -50,11 +50,11 @@
 					</div>
 					<ul class="nav navbar-nav navbar-right">
 		      	<% if user_signed_in? %>
-							<li><%= link_to "Customers", '#' %></li>
-							<li><%= link_to "Vendors", '#' %></li>
-							<li><%= link_to "Reports", '#' %></li>
+							<li><%= link_to "Customers", customers_path %></li>
+							<li><%= link_to "Vendors", vendors_path %></li>
+							<li><%= link_to "Reports", reports_path %></li>
 							<% if current_user.admin? %>
-								<li><%= link_to "Admin Panel", '#' %></li>
+								<li><%= link_to "Admin Panel", admin_path %></li>
 							<% end %>
 		      	<% end %>
 		      </ul>
