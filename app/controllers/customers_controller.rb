@@ -11,6 +11,9 @@ class CustomersController < ApplicationController
   # GET /customers/1
   # GET /customers/1.json
   def show
+    respond_to do |format|
+      format.js { render layout: false } # Add this line to you respond_to block
+    end
   end
 
   # GET /customers/new

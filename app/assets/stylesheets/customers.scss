@@ -2,8 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .new-cust {
-	color: white;
 	text-align: center;
+}
+
+.well.new-cust-well {
+    background: rgb(22, 105, 173);
 }
 
 .btn.btn-success {
