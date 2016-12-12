@@ -10,4 +10,8 @@ Rails.application.routes.draw do
   end
 
   get 'home', to: 'pages#home'
+
+  resources :users do
+  	resource :profile
+	end
 end
