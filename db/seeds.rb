@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+EmployeeType.create(title: 'Administrator', description: 'An admin of the NP D.U.K.E. CRM application.')
+EmployeeType.create(title: 'Standard', description: 'A standard user of the NP D.U.K.E. CRM application.')
