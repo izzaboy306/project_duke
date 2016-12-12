@@ -3,17 +3,13 @@
   <head>
     <title>Nicholson Plumbing | D.U.K.E.</title>
     <%= csrf_meta_tags %>
-
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
-
 	<body>
 		<%= render 'layouts/main/navigation' %>
 		<%= render 'layouts/main/notification' %>
 		<%= yield %>
-
 		<!-- Javascript placed at bottom to improve page load times. -->
 		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>

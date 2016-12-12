@@ -1,0 +1,1 @@
+json.array! @customers_statuses, partial: 'customers_statuses/customers_status', as: :customers_status

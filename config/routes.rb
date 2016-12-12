@@ -13,8 +13,10 @@ Rails.application.routes.draw do
   	resource :profile
 	end
 
+	resources :customers
+	resources :customers_statuses
+
   get 'home', to: 'pages#home'
-  get 'customers', to: 'pages#customers'
   get 'vendors', to: 'pages#vendors'
   get 'reports', to: 'pages#reports'
   get 'admin', to: 'admin#home'

@@ -1,0 +1,1 @@
+json.partial! "customers_statuses/customers_status", customers_status: @customers_status

@@ -10,7 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161212002932) do
+ActiveRecord::Schema.define(version: 20161212193709) do
+
+  create_table "customers", force: :cascade do |t|
+    t.integer  "customers_status_id"
+    t.string   "company_name"
+    t.text     "customer_notes"
+    t.string   "address_line_one"
+    t.string   "address_line_two"
+    t.string   "city"
+    t.string   "zip_code"
+    t.string   "phone_number"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "customers_statuses", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "profiles", force: :cascade do |t|
     t.integer  "user_id"
