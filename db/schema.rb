@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20161212193709) do
 
   create_table "customers", force: :cascade do |t|
-    t.integer  "customers_status_id"
+    t.integer  "customers_statuses_id"
     t.string   "company_name"
     t.text     "customer_notes"
     t.string   "address_line_one"
@@ -21,8 +21,9 @@ ActiveRecord::Schema.define(version: 20161212193709) do
     t.string   "city"
     t.string   "zip_code"
     t.string   "phone_number"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.string   "email_address"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
   create_table "customers_statuses", force: :cascade do |t|
@@ -53,7 +54,6 @@ ActiveRecord::Schema.define(version: 20161212193709) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.integer  "employee_type_id"
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.boolean  "admin",                  default: false

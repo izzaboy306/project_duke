@@ -11,9 +11,6 @@ class CustomersController < ApplicationController
   # GET /customers/1
   # GET /customers/1.json
   def show
-    respond_to do |format|
-      format.js { render layout: false } # Add this line to you respond_to block
-    end
   end
 
   # GET /customers/new
@@ -32,7 +29,7 @@ class CustomersController < ApplicationController
 
     respond_to do |format|
       if @customer.save
-        format.html { redirect_to @customer, notice: 'Customer was successfully created.' }
+        format.html { redirect_to customers_path, notice: 'Customer was successfully created.' }
         format.json { render :show, status: :created, location: @customer }
       else
         format.html { render :new }
@@ -46,7 +43,7 @@ class CustomersController < ApplicationController
   def update
     respond_to do |format|
       if @customer.update(customer_params)
-        format.html { redirect_to @customer, notice: 'Customer was successfully updated.' }
+        format.html { redirect_to customers_path, notice: 'Customer was successfully updated.' }
         format.json { render :show, status: :ok, location: @customer }
       else
         format.html { render :edit }
@@ -73,6 +70,6 @@ class CustomersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def customer_params
-      params.require(:customer).permit(:customers_statuses_id, :company_name, :customer_notes, :address_line_one, :address_line_two, :city, :zip_code, :phone_number)
+      params.require(:customer).permit(:customers_statuses_id, :company_name, :customer_notes, :address_line_one, :address_line_two, :city, :zip_code, :phone_number, :email_address)
     end
 end
