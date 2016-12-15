@@ -29,7 +29,7 @@ class CustomersStatusesController < ApplicationController
 
     respond_to do |format|
       if @customers_status.save
-        format.html { redirect_to @customers_status, notice: 'Customers status was successfully created.' }
+        format.html { redirect_to customers_statuses_path, notice: 'Customers status was successfully created.' }
         format.json { render :show, status: :created, location: @customers_status }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class CustomersStatusesController < ApplicationController
   def update
     respond_to do |format|
       if @customers_status.update(customers_status_params)
-        format.html { redirect_to @customers_status, notice: 'Customers status was successfully updated.' }
+        format.html { redirect_to customers_statuses_path, notice: 'Customers status was successfully updated.' }
         format.json { render :show, status: :ok, location: @customers_status }
       else
         format.html { render :edit }
@@ -70,6 +70,6 @@ class CustomersStatusesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def customers_status_params
-      params.fetch(:customers_status, {})
+      params.require(:customers_status).permit(:title, :description)
     end
 end

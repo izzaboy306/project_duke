@@ -2,10 +2,11 @@
 	<h6 class="navbar-heading">Customer Management</h6>
   <div class="list-group">
   	<%= link_to "Add New Customer", new_customer_path, class: 'list-group-item' %>
+  	<%= link_to "Manage Customers", customers_path, class: 'list-group-item' %>
 	</div>
 	<h6 class="navbar-section-heading">Customer Status Management</h6>
 	<div class="list-group">
   	<%= link_to "Add New Customer Status", new_customers_status_path, class: 'list-group-item' %>
-  	<%= link_to "Manage Customer Statuses", '#', class: 'list-group-item' %>
+  	<%= link_to "Manage Customer Statuses", customers_statuses_path, class: 'list-group-item' %>
 	</div>
 </nav>

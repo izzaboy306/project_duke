@@ -1,25 +1,12 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Customers Statuses</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @customers_statuses.each do |customers_status| %>
-      <tr>
-        <td><%= link_to 'Show', customers_status %></td>
-        <td><%= link_to 'Edit', edit_customers_status_path(customers_status) %></td>
-        <td><%= link_to 'Destroy', customers_status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Customers Status', new_customers_status_path %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 col-lg-2">
+      <%= render 'customers/side-nav' %>
+    </div>
+    <div class="col-sm-9 col-lg-10">
+      <div class="well">
+        <%= render 'view_customers_statuses' %>
+      </div>
+    </div>
+  </div>
+</div>
