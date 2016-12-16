@@ -4,12 +4,16 @@
     <title>Nicholson Plumbing | D.U.K.E.</title>
     <%= csrf_meta_tags %>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 	<body>
-		<%= render 'layouts/main/navigation' %>
-		<%= render 'layouts/main/notification' %>
-		<%= yield %>
+    <div class="navigation col-md-1">
+      <%= render 'layouts/main/navigation' %>
+    </div>
+    <div class="content col-md-11">
+      <%= render 'layouts/main/notification' %>
+      <%= yield %>
+    </div>
 		<!-- Javascript placed at bottom to improve page load times. -->
 		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
