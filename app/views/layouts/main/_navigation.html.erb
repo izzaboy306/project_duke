@@ -15,11 +15,27 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
-				<li ><a href="#">Profile<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
-				<li ><a href="#">Customers<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a></li>
+				<li class="active">
+					<%= link_to home_path, :class => 'button white' do %>
+	    			<span id="span">Home</span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
+					<% end %>
+				</li>
+				<li>
+					<%= link_to edit_user_profile_path( user_id: current_user.id ), :class => 'button white' do %>
+	    			<span id="span">Profile</span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span>
+					<% end %>
+				</li>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Customers <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-group"></span></a>
+					<ul class="dropdown-menu forAnimate" role="menu">
+						<li><%= link_to "Add New Customer", new_customer_path %></li>
+						<li><%= link_to "Manage Customers", customers_path %></li>
+						<li><%= link_to "Add Customer Status", new_customers_status_path %></li>
+						<li><%= link_to "Manage Statuses", customers_statuses_path %></li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Vendors <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-shopping-basket"></span></a>
 					<ul class="dropdown-menu forAnimate" role="menu">
 						<li><a href="#">Action</a></li>
 						<li><a href="#">Another action</a></li>
@@ -30,20 +46,10 @@
 						<li><a href="#">One more separated link</a></li>
 					</ul>
 				</li>
-				<li><a href="#">Home<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
-				<li ><a href="#">Profile<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
-				<li ><a href="#">Messages<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a>
-					<ul class="dropdown-menu forAnimate" role="menu">
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li class="divider"></li>
-						<li><a href="#">Separated link</a></li>
-						<li class="divider"></li>
-						<li><a href="#">One more separated link</a></li>
-					</ul>
+				<li>
+					<%= link_to destroy_user_session_path, method: :delete, :class => 'button white' do %>
+	    			<span id="span">Logout</span><span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-sign-out"></span>
+					<% end %>
 				</li>
 			</ul>
 		</div>

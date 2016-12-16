@@ -7,12 +7,14 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 	<body>
-    <div class="navigation col-md-1">
-      <%= render 'layouts/main/navigation' %>
-    </div>
-    <div class="content col-md-11">
-      <%= render 'layouts/main/notification' %>
-      <%= yield %>
+    <div class="row">
+      <div class="navigation col-md-2">
+        <%= render 'layouts/main/navigation' %>
+      </div>
+      <div class="content col-md-10">
+        <%= render 'layouts/main/notification' %>
+        <%= yield %>
+      </div>
     </div>
 		<!-- Javascript placed at bottom to improve page load times. -->
 		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
