@@ -10,7 +10,7 @@
   <tbody>
     <% @customers_statuses.each do |customers_status| %>
       <tr>
-        <td><%= link_to customers_status.title, customers_status %></td>
+        <td><%= customers_status.title %></td>
         <td><%= customers_status.description %></td>
         <td><%= link_to 'Edit', edit_customers_status_path(customers_status) %></td>
         <td><%= link_to 'Destroy', customers_status, method: :delete, data: { confirm: 'Are you sure?' } %></td>
