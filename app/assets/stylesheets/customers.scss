@@ -27,12 +27,16 @@ table {
     width: 100%;
 }
 
+th {
+	background: #F8FAFC;
+}
+
 th, td {
     text-align: left;
     padding: 8px;
     border-bottom: 1px solid #EBEFF5;
 }
 
-tr:nth-child(even){ background-color: #fff; }
-tr:nth-child(odd){ background-color: #F8FAFC; }
-tr:hover { background-color: #DFE3E9; }
+table > tbody > tr:nth-child(odd){ background-color: #fff; }
+table > tbody > tr:nth-child(even){ background-color: #F8FAFC; }
+table > tbody > tr:hover { background-color: #DFE3E9; }

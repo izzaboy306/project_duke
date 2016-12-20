@@ -1,20 +1,22 @@
-<div style="overflow-x:auto;">
-  <table>
-    <tbody>
+<table>
+  <thead>
+    <tr>
       <th>Customer Name</th>
       <th>Phone Number</th>
       <th>Email</th>
       <th>Edit</th>
       <th>Delete</th>
-      <% @customers.each do |customer| %>
-        <tr>
-          <td><%= link_to customer.company_name, customer %></td>
-          <td><%= customer.phone_number %></td>
-          <td><%= customer.email_address %></td>
-          <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
-          <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+    </tr>
+  </thead>
+  <tbody>
+    <% @customers.each do |customer| %>
+      <tr>
+        <td><%= link_to customer.company_name, customer %></td>
+        <td><%= customer.phone_number %></td>
+        <td><%= customer.email_address %></td>
+        <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+        <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
