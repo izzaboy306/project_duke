@@ -21,15 +21,11 @@
 @import 'customers';
 @import 'users';
 
-// Typography Styles
-h1, h2, h3 {
-  font-family: 'Open Sans', sans-serif;
-}
-
 // Main Content
 html {
   height: 100%;
   body {
+  	font-family: 'Open Sans', sans-serif;
     background-color: #D5DAE5;
     padding-top: 50px;
   }

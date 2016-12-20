@@ -14,15 +14,17 @@
 			<ul class="nav navbar-nav">
 				<li>
 					<%= link_to home_path, :class => 'button white' do %>
-	    			<span id="span">Home</span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
+	    			<span class="span">Home</span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
 					<% end %>
+				</li>
+				<li>
 					<% if current_user.profile.present? %>
 						<%= link_to edit_user_profile_path( user_id: current_user.id ), :class => 'button white' do %>
-							<span id="span">Profile</span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span>
+							<span class="span">Profile</span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span>
 						<% end %>
 					<% else %>
 						<%= link_to new_user_profile_path( user_id: current_user.id ), :class => 'button white' do %>
-							<span id="span">Profile</span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span>
+							<span class="span">Profile</span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span>
 						<% end %>
 					<% end %>
 				</li>
@@ -45,8 +47,8 @@
 					</ul>
 				</li>
 				<li>
-					<%= link_to destroy_user_session_path, method: :delete, :class => 'button white' do %>
-	    			<span id="span">Logout</span><span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-sign-out"></span>
+					<%= link_to home_path, :class => 'button white' do %>
+	    			<span class="span">Reports</span><span style="font-size:16px;" class="pull-right hidden-xs showopacity fa fa-bar-chart"></span>
 					<% end %>
 				</li>
 			</ul>
