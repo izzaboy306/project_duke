@@ -8,19 +8,14 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<%= link_to home_path, class:'navbar-brand toggle-btn' do %>
-				<i class="fa fa-gears"></i> D.U.K.E.</a>
-			<% end %>
 		</div>
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
 			<ul class="nav navbar-nav">
-				<li class="active">
+				<li>
 					<%= link_to home_path, :class => 'button white' do %>
 	    			<span id="span">Home</span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span>
 					<% end %>
-				</li>
-				<li>
 					<% if current_user.profile.present? %>
 						<%= link_to edit_user_profile_path( user_id: current_user.id ), :class => 'button white' do %>
 							<span id="span">Profile</span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span>

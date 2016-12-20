@@ -1,0 +1,126 @@
+// Top Navigation
+.navbar {
+	color: #fff;
+	background: #37475F;
+	border-radius: 0 !important;
+}
+
+a.navbar-brand {
+	color: #fff !important;
+	width: 298px;
+	text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar-fixed-top {
+	border-bottom: 1px solid black;
+	-webkit-box-shadow: 0 4px 6px -5px #222;
+  -moz-box-shadow: 0 4px 6px -6px #222;
+  box-shadow: 0 4px 6px -5px #222;
+}
+
+.nav.navbar-nav li a {
+	color: #fff !important; 
+}
+.nav .navbar-nav li a:hover { 
+	color: grey !important;
+}
+
+// Side Navigation
+/* .....NavBar: Icon only with coloring/layout.....*/
+
+/*small/medium side display*/
+@media (min-width: 768px) {
+
+	/*lets nav bar to be showed on mouseover*/
+	nav.sidebar:hover {
+		margin-left: 200px;
+	}
+
+
+	/*adds border top to first nav box */
+	nav.sidebar .navbar-nav > li:first-child{
+		// border-top: 1px #e5e5e5 solid;
+	}
+
+	/*adds border to bottom nav boxes*/
+	nav.sidebar .navbar-nav > li{
+		// border-bottom: 1px #e5e5e5 solid;
+	}
+
+	/* Colors/style dropdown box*/
+	nav.sidebar .navbar-nav .open .dropdown-menu {
+		position: static;
+		float: none;
+		width: auto;
+		margin-top: 0;
+		background-color: transparent;
+		border: 0;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+
+	/*allows nav box to use 100% width*/
+	nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
+		padding: 0 0px 0 0px;
+	}
+
+	/*colors dropdown box text */
+	.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+		color: #777;
+	}
+
+	/*gives sidebar width/height*/
+	nav.sidebar{
+		z-index: 1;
+		float: left;
+		height: 100%;
+		width: 200px;
+		margin-left: -165px;
+		overflow-y: hidden;
+		margin-bottom: 0px;
+	}
+
+	/*give sidebar 100% width;*/
+	nav.sidebar li {
+		width: 100%;
+	}
+
+	/* Move nav to full on mouse over*/
+	nav.sidebar:hover{
+		margin-left: -15px;
+	}
+	/*for hiden things when navbar hidden*/
+	.forAnimate{
+		opacity: 0;
+	}
+}
+
+/* .....NavBar: Fully showing nav bar..... */
+
+@media (min-width: 1330px) {
+
+	/*Show all nav*/
+	nav.sidebar{
+		z-index: 1;
+		position: fixed;
+		height: 100%;
+		width: 16.7%;
+		margin-left: -15px;
+		overflow-y: hidden;
+		background: #37475F;
+	}
+}
+
+nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
+	color: #CCC;
+	background-color: transparent;
+}
+
+nav:hover .forAnimate{
+	opacity: 1;
+}
+section{
+	padding-left: 15px;
+}
