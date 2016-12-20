@@ -15,7 +15,7 @@ $dropDown       : false;
 		font-size: 20px;
 		font-weight: bold;
     &:hover, &:focus {
-      color: #fff; }}
+      color: #e5e5e5; }}
   .navbar-text {
     color: $colDefault; }
   .navbar-nav {
@@ -120,8 +120,9 @@ nav.sidebar.navbar {
 		margin-top: 0;
 		background-color: transparent;
 		border: 0;
-		-webkit-box-shadow: none;
-		box-shadow: none;
+		-webkit-box-shadow: 0 4px 6px -5px #222;
+  	-moz-box-shadow: 0 4px 6px -6px #222;
+  	box-shadow: 0 4px 6px -5px #222;
 	}
 
 	/*allows nav box to use 100% width*/
