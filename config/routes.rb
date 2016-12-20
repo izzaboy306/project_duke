@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 	end
 
   if Rails.env.production?
-    devise_for :users, :controllers => { :registrations => "users/registrations" } 
+    devise_for :users
   else
     devise_for :users
   end
