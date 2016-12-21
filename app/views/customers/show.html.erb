@@ -1,14 +1,139 @@
 <div class="block-callout container-fluid">
-	<h2><%= @customer.company_name %> Detailed Information</h2>
+	<div class="row">
+	  <div class="col-md-10">
+	 		<h2>Customer Detailed Information</h2>
+	  </div>
+	  <div class="col-md-2">
+	  	<%= link_to 'Back', customers_path, class: 'btn btn-danger escape-button' %>
+		</div>
+	</div>
 	<div class="horizontal-line">&nbsp;</div>
 	<h6 class="sub-block-callout">View a clients detailed information here.</h6>
 </div>
-<div class="container">
+<div class="container-fluid">
+	<div class="row">
+		<!-- Customer Projects Panel -->
+    <div class="col-md-5">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Customer Information</h3>
+        </div>
+        <div class="panel-body">
+          <div class="col-md-6">
+				  	<p class="company-info-header"><%= @customer.company_name %></p>
+				  	<p>
+				  		<%= @customer.address_line_one %><br>
+							<%= @customer.address_line_two %><br>
+							<%= @customer.city + ', Insert State' %><br>
+							<%= @customer.zip_code %>
+						</p>
+				  </div>
+				  <div class="col-md-4 col-md-offset-2">
+				  	<p class="company-info-header">Contact Info</p>
+				  	<p>
+				  		<%= @customer.phone_number %><br>
+							<%= @customer.email_address %>
+						</p>
+				  </div>
+        </div>
+      </div>
+    </div>
+		<!-- Customer Projects Panel -->
+    <div class="col-md-7">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Projects</h3>
+        </div>
+        <div class="panel-body">
+          <table>
+					  <thead>
+					    <tr>
+					      <th>Project Name</th>
+					      <th>Start Date</th>
+					      <th>End Date</th>
+					      <th>Type</th>
+					      <th>Total Cost</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+				      <tr>
+				        <td>Arrowmont Constructors</td>
+				        <td>01/01/2016</td>
+				        <td>02/01/2016</td>
+				        <td>Commercial</td>
+				        <td>$50,000</td>
+				      </tr>
+				      <tr>
+				        <td>Arrowmont Constructors</td>
+				        <td>01/01/2016</td>
+				        <td>02/01/2016</td>
+				        <td>Commercial</td>
+				        <td>$50,000</td>
+				      </tr>
+					  </tbody>
+					</table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Second Row -->
   <div class="row">
-    <div class="well">
-      <%= @customer.inspect %>
-      <p>Customer Information and Projects Page</p>
-      <%= link_to 'Back', customers_path, class: 'btn btn-danger' %>
+  	<!-- Customer Quick Reports Panel -->
+    <div class="col-md-5">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Quick Reports</h3>
+        </div>
+        <div class="panel-body">
+        	<ul class="reports-list">
+        		<li>Report One</li>
+        		<li>Report Two</li>
+        		<li>Report Three</li>
+        		<li>Report Four</li>
+        		<li>Report Five</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+		<!-- Customer Invoices Panel -->
+    <div class="col-md-7">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Invoices</h3>
+        </div>
+        <div class="panel-body">
+          <table>
+					  <thead>
+					    <tr>
+					    	<th>Invoice #</th>
+					      <th>Project Name</th>
+					      <th>Billed Date</th>
+					      <th>Due Date</th>
+					      <th>Type</th>
+					      <th>Total Due</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+				      <tr>
+				      	<td>#001</td>
+				        <td>Arrowmont Constructors</td>
+				        <td>01/01/2016</td>
+				        <td>02/01/2016</td>
+				        <td>Commercial</td>
+				        <td>$35,000</td>
+				      </tr>
+				      <tr>
+				      	<td>#002</td>
+				        <td>Arrowmont Constructors</td>
+				        <td>02/01/2016</td>
+				        <td>03/01/2016</td>
+				        <td>Commercial</td>
+				        <td>$15,000</td>
+				      </tr>
+					  </tbody>
+					</table>
+        </div>
+      </div>
     </div>
   </div>
 </div>
