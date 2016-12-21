@@ -3,14 +3,18 @@
 	<div class="horizontal-line">&nbsp;</div>
 	<h6 class="sub-block-callout">Add new customer statuses to the database here.</h6>
 </div>
-<div class="col-md-6 col-md-offset-3">
-	<div class="panel panel-default">
-	  <div class="panel-heading">
-	    <h3 class="panel-title">Create New Customer Status</h3>
-	  </div>
-	  <div class="panel-body">
-	    <%= render 'form', customers_status: @customers_status %>
-	  </div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Create New Customer Status</h3>
+			  </div>
+			  <div class="panel-body">
+			    <%= render 'form', customers_status: @customers_status %>
+			  </div>
+			</div>
+			<%= link_to 'Back', customers_statuses_path, class: 'btn btn-danger' %>
+		</div>
 	</div>
-	<%= link_to 'Back', customers_statuses_path, class: 'btn btn-danger' %>
 </div>
