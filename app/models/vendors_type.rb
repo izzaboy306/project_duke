@@ -1,0 +1,3 @@
+class VendorsType < ApplicationRecord
+	validates_presence_of :title, :description
+end

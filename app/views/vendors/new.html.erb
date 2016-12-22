@@ -1,0 +1,20 @@
+<div class="block-callout container-fluid">
+	<h2>Vendor Creation</h2>
+	<div class="horizontal-line">&nbsp;</div>
+	<h6 class="sub-block-callout">Add new vendors to the database through this form.</h6>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Create New Vendor</h3>
+			  </div>
+			  <div class="panel-body">
+			    <%= render 'form', vendor: @vendor %>
+			  </div>
+			</div>
+			<%= link_to 'Back', vendors_path, class: 'btn btn-danger' %>
+		</div>
+	</div>
+</div>

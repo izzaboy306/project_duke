@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161212193709) do
+ActiveRecord::Schema.define(version: 20161222174605) do
 
   create_table "customers", force: :cascade do |t|
     t.integer  "customers_statuses_id"
@@ -59,6 +59,35 @@ ActiveRecord::Schema.define(version: 20161212193709) do
     t.boolean  "admin",                  default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "vendors", force: :cascade do |t|
+    t.integer  "vendors_statuses_id"
+    t.integer  "vendors_types_id"
+    t.string   "company_name"
+    t.string   "address_line_one"
+    t.string   "address_line_two"
+    t.string   "city"
+    t.string   "zip_code"
+    t.string   "phone_number"
+    t.string   "email_address"
+    t.text     "vendor_notes"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "vendors_statuses", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "vendors_types", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

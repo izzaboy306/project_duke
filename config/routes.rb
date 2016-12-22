@@ -15,6 +15,9 @@ Rails.application.routes.draw do
 
 	resources :customers
 	resources :customers_statuses
+	resources :vendors
+	resources :vendors_statuses
+	resources :vendors_types
 
   get 'home', to: 'pages#home'
   get 'vendors', to: 'pages#vendors'
