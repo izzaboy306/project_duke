@@ -1,0 +1,20 @@
+<div class="block-callout container-fluid">
+	<h2>Vendor Type Creation</h2>
+	<div class="horizontal-line">&nbsp;</div>
+	<h6 class="sub-block-callout">Add new vendor types to the database here.</h6>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Create New Vendor Type</h3>
+			  </div>
+			  <div class="panel-body">
+			    <%= render 'form', vendors_type: @vendors_type %>
+			  </div>
+			</div>
+			<%= link_to 'Back', vendors_types_path, class: 'btn btn-danger' %>
+		</div>
+	</div>
+</div>

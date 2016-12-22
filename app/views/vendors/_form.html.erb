@@ -16,6 +16,11 @@
     <%= f.text_field :company_name, class: 'form-control' %>
   </div>
 
+    <div class="form-group">
+    <%= f.label :vendor_type %>
+    <%= f.collection_select :vendors_types_id, VendorsType.all, :id, :title, {}, class: 'form-control' %>
+  </div>
+
   <div class="form-group">
     <%= f.label :vendor_status %>
     <%= f.collection_select :vendors_statuses_id, VendorsStatus.all, :id, :title, {}, class: 'form-control' %>

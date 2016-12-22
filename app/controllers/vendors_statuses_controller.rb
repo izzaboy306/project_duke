@@ -41,7 +41,7 @@ class VendorsStatusesController < ApplicationController
 	def destroy
 		@vendors_status.destroy
 		respond_to do |format|
-			format.html { redirect_to vendors_statuses_path, notice: 'Customer status was successfully updated.' }
+			format.html { redirect_to vendors_statuses_path, notice: 'Vendor status was successfully updated.' }
 		end
 	end
 
