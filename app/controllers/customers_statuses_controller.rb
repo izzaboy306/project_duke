@@ -43,7 +43,7 @@ class CustomersStatusesController < ApplicationController
   def update
     respond_to do |format|
       if @customers_status.update(customers_status_params)
-        format.html { redirect_to customers_statuses_path, notice: 'Customers status was successfully updated.' }
+        format.html { redirect_to customers_statuses_path, notice: 'Customer status was successfully updated.' }
         format.json { render :show, status: :ok, location: @customers_status }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class CustomersStatusesController < ApplicationController
   def destroy
     @customers_status.destroy
     respond_to do |format|
-      format.html { redirect_to customers_statuses_url, notice: 'Customers status was successfully destroyed.' }
+      format.html { redirect_to customers_statuses_url, notice: 'Customer status was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

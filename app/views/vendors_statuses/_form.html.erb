@@ -1,0 +1,27 @@
+<%= form_for(vendors_status) do |f| %>
+  <% if vendors_status.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vendors_status.errors.count, "error") %> prohibited this vendors status from being saved:</h2>
+
+      <ul>
+      <% vendors_status.errors.full_messages.each do |message| %>
+        <li><%= message %></li> 
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit "Submit", class: 'btn btn-primary' %>
+  </div>
+<% end %>
