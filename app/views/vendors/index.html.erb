@@ -6,7 +6,28 @@
 <div class="col-md-12">
 	<div class="panel panel-default">
 	  <div class="panel-body customer-panel">
-	  	<%= render 'view_vendors' %>
+	  	<table>
+			  <thead>
+			    <tr>
+			      <th>Vendor Name</th>
+			      <th>Phone Number</th>
+			      <th>Email</th>
+			      <th>Edit</th>
+			      <th>Delete</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <% @vendors.each do |vendor| %>
+			      <tr>
+			        <td><%= link_to vendor.company_name, vendor %></td>
+			        <td><%= vendor.phone_number %></td>
+			        <td><%= vendor.email_address %></td>
+			        <td><%= link_to 'Edit', edit_vendor_path(vendor) %></td>
+			        <td><%= link_to 'Destroy', vendor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			      </tr>
+			    <% end %>
+			  </tbody>
+			</table>
 	  </div>
 	</div>
 </div>

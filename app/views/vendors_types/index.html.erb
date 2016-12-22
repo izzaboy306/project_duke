@@ -6,7 +6,26 @@
 <div class="col-md-12">
 	<div class="panel panel-default">
 	  <div class="panel-body customer-panel">
-	  	<%= render 'view_vendors_types' %>
+	  	<table>
+			  <thead>
+			    <tr>
+			      <th>Title</th>
+			      <th>Description</th>
+			      <th>Edit</th>
+			      <th>Delete</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <% @vendors_types.each do |vendors_type| %>
+			      <tr>
+			        <td><%= vendors_type.title %></td>
+			        <td><%= vendors_type.description %></td>
+			        <td><%= link_to 'Edit', edit_vendors_type_path(vendors_type) %></td>
+			        <td><%= link_to 'Destroy', vendors_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+			      </tr>
+			    <% end %>
+			  </tbody>
+			</table>
 	  </div>
 	</div>
 </div>
